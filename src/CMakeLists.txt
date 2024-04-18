@@ -16,7 +16,7 @@ add_library(imgui-ws ${IMTUI_LIBRARY_TYPE}
     )
 
 target_include_directories(imgui-ws PUBLIC
-    ../include
+    ${CMAKE_CURRENT_SOURCE_DIR}/../include
     )
 
 target_link_libraries(imgui-ws PRIVATE
