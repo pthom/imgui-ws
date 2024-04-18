@@ -25,6 +25,7 @@ option(IMGUI_WS_BUILD_EXAMPLES_NULL     "imgui-ws: build headless examples" ${IM
 option(IMGUI_WS_BUILD_EXAMPLES_SDL2     "imgui-ws: build sdl2 examples" ${IMGUI_WS_STANDALONE})
 
 option(IMGUI_WS_BUILD_TOOLS             "imgui-ws: build tools" ${IMGUI_WS_STANDALONE})
+option(IMGUI_WS_PROVIDE_IMGUI           "imgui-ws: use provided imgui" ${IMGUI_WS_STANDALONE})
 
 # sanitizers
 
