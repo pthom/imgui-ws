@@ -4,6 +4,7 @@
 #include "common.h"
 
 #include <map>
+#include <string>
 
 ImGuiKey toImGuiKey(int32_t keyCode) {
     switch (keyCode) {
@@ -164,11 +165,17 @@ struct State {
     void update();
 };
 
+std::string this_source_file_dir()
+{
+    std::string file = __FILE__;
+    return file.substr(0, file.find_last_of("/\\"));
+}
+
 int main(int argc, char ** argv) {
     printf("Usage: %s [port] [http-root]\n", argv[0]);
 
-    int port = 5000;
-    std::string httpRoot = "../examples";
+    int port = 5003;
+    std::string httpRoot = this_source_file_dir() + "/..";
 
     if (argc > 1) port = atoi(argv[1]);
     if (argc > 2) httpRoot = argv[2];
